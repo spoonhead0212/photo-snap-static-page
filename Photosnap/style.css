@@ -1,0 +1,399 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+:root {
+    --myFont: 'Ubuntu', sans-serif;
+    --myFontWeight1: 500;
+    --myFontWeight2: 800;
+    --myFontWeight3: 900;
+    --myColorWhite: #fffffc;
+    --myColorBlack: #001219;
+    --myColorYellow: #f77f00;
+}
+
+body {
+    font-family: var(--myFont);
+    font-size: 13px;
+}
+
+main {
+    width: 75vw;
+    margin-inline: auto;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*header and nav design*/
+header {
+    display: flex;
+    justify-content: space-between;
+    padding-block: 1rem;
+    color: black;
+    padding-inline: 2rem;
+}
+
+label,
+.menu-box {
+    display: none;
+}
+
+.menu-box {
+    display: none;  
+}
+
+.burger-menu img {
+    width: 25px;
+}
+
+.logo a {
+    text-transform: uppercase;
+    font-weight: var(--myFontWeight3);
+    font-size: 20px;
+    color: var(--myColorYellow);
+    letter-spacing: 1px;
+}
+
+.menu > ul li{
+    display: inline-block;
+    font-size: 13px;
+    padding: .5rem 1rem;
+}
+
+.menu li a {
+    color: var(--myColorYellow);
+    text-transform: uppercase;
+}
+
+.butt {
+    background-color: var(--myColorBlack);
+    color: var(--myColorYellow);
+    padding: .5rem 1rem;
+    font-family: var(--myFont);
+    font-weight: var(--myFontWeight2);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: none;
+}
+
+.butt:hover {
+    background-color: var(--myColorYellow);
+    color: var(--myColorWhite);
+    cursor: pointer;
+}
+/*header and nav design*/
+
+/*section design*/
+.photo-content {
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 500px 400px 500px;
+    grid-template-areas: 
+    "a a a a a a b b b b b b"
+    "c c c c c c c d d d d d"
+    "e e e e e e f f f f f f";
+}
+
+.top-left {grid-area: a;}
+.top-right {grid-area: b;}
+.mid-left {grid-area: c;}
+.mid-right {grid-area: d;}
+.bottom-left {grid-area: e;}
+.bottom-right {grid-area: f;}
+
+.top-right > img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.top-left,
+.bottom-left {
+    background-color: var(--myColorBlack);
+    color: var(--myColorWhite);
+    padding-top: 8.5rem;
+    padding-inline: 13%;
+}
+
+.top-left > h1,
+.bottom-left> h1 {
+    line-height: 2.3rem;
+    text-transform: uppercase;
+}
+
+.top-left > p,
+.bottom-left > p {
+    padding-block: 2rem;
+    line-height: 1.5rem;
+}
+
+
+.mid-right {
+    background-color: var(--myColorWhite);
+    color: var(--myColorBlack);
+    padding-top: 4rem;
+    padding-inline: 13%;
+}
+
+.mid-right > h1 {
+    line-height: 2.3rem;
+    text-transform: uppercase;
+}
+
+.mid-right > p {
+    padding-block: 2rem;
+    line-height: 1.5rem;
+}
+
+.mid-left > img {
+    width: 100%;
+    height: 100%;
+}
+
+.bottom-right > img {
+    width: 100%;
+    height: 100%;
+}
+/*section design*/
+
+/*section-2*/
+.section-2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.section-2-div {
+    position: relative;
+}
+
+.section-2-div > img {
+    width: 100%;
+    height: 100%;
+}
+
+.details {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    padding: 1.5rem 1rem;
+    color: var(--myColorBlack);
+}
+
+.details:hover {
+    background-color: rgba(0, 0, 0, 0.5)
+}
+
+.details > p {
+    padding-bottom: 1rem;
+    padding-top: 5px;
+}
+
+.details > span a {
+    text-decoration: none;
+    color: var(--myColorYellow);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: var(--myFontWeight2);
+}
+
+.cont > span a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--myColorBlack);
+    font-size: 15px;
+    letter-spacing: 2px;
+}
+
+.cont-black > span a {
+    color: var(--myColorWhite);
+}
+
+.cont {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 1rem;
+}
+
+.cont > img {
+    width: 30px;
+    align-self: center;
+}
+
+.section-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding-block: 5rem;
+}
+
+.section-3 > div {
+    text-align: center;
+    padding: 1rem;
+}
+
+.section-3 > div h3 {
+    padding-block: 1rem;
+}
+
+.section-3 > div p {
+    line-height: 1.2rem;
+}
+
+.foot {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--myColorBlack);
+    justify-content: space-between;
+    padding-block: 1rem;
+    padding-inline:  1.5em;
+}
+
+.footer-logo > div {
+    padding-top: 1.3rem;
+}
+
+.footer-logo > div a {
+    margin-right: 1rem;
+}
+
+.fab {
+    color: var(--myColorWhite);
+}
+
+.footer-menu > ul li {
+    padding-bottom: 10px;
+}
+
+.footer-menu > ul a {
+    text-decoration: none;
+    color: var(--myColorWhite);
+}
+
+.footer-menu > ul a:hover {
+    color: var(--myColorYellow);
+}
+
+@media screen and (max-width: 934px) {
+
+    header {
+        position: relative;
+        background-color: black;
+    }
+
+    .logo a,
+    .menu > ul li a {
+        color: var(--myColorWhite);
+    }
+
+    label,
+    .menu-box {
+        display: block;
+    }
+
+    .menu-box {
+        display: none;
+    }
+
+    .menu-box:checked ~ .menu {
+        display: block;
+    }
+
+    .menu-box:checked ~ .butt {
+        display: block;
+    }
+
+    .menu {
+        background-color: black;
+        text-align: center;
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+    }
+
+    .menu ul li {
+        display: block;
+        padding-bottom: 15px;
+    }
+
+    label {
+        position: absolute;
+        top: 15px;
+        right: 30px;
+        cursor: pointer;
+    }
+
+    .butt {
+        display: none;
+        position: absolute;
+        padding-block: 10px;
+        top: 170px;
+        left: 0;
+        width: 100%;
+        background-color: black;
+    }
+
+    main {
+        width: 100%;
+    }
+
+    .photo-content {
+        display: block;
+    }
+
+    .top-left,
+    .bottom-left,
+    .mid-right {
+        padding: 4rem; 
+    }
+
+    .mid-left {
+        order: 2;
+    }
+    .mid-right {
+        order: 2;
+    }
+
+    .section-2 {
+        display: block;
+    }
+
+    .section-2-div > img {
+        display: block;
+        max-height: 100%;
+    }
+
+}
+
+@media screen and (max-width: 425px) {
+    .top-left,
+    .bottom-left,
+    .mid-right {
+        padding: 2rem; 
+    }
+
+    .foot {
+        display: block;
+        text-align: center;
+    }
+
+    .footer-menu {
+        padding-block: 1rem;
+    }
+
+    
+}
+
